@@ -18,43 +18,62 @@
 </head>
 
 <body>
-
-    <h1>Condition checking with if else</h1>
+    <!-- coderLabs -->
+<!-- Name : Nabeel 
+number : 03172098129 -->
+    <!-- <h1>Condition checking with if else</h1>
     <form onsubmit="grade(); return false">
+        <input type="number" id="marks">
+        <button type="submit">check</button>
+        <h1 id="show"></h1>
+    </form> -->
+    <h1>Number Guess</h1>
+    <form onsubmit="guess(); return false">
         <input type="number" id="marks">
         <button type="submit">check</button>
         <h1 id="show"></h1>
     </form>
 
     <script>
-
-       function grade(){
-        let temp = document.querySelector('#marks').value;
+        let temp = document.querySelector('#marks');
         let show = document.querySelector('#show');
+        function guess(){
+            let a = Math.floor(Math.random()*11);
+            if(a==temp.value){
+                show.innerHTML = "!hurra You win the game"+"<br>"+"Hidden number is "+ a;
+                
+            }else{
+                show.innerHTML = "sorry try again"+"<br>"+"Hidden number is "+a;
 
-
-        if (temp >= 80 && temp <=100) {
-            show.innerHTML = "Grade : A-One";
-            let temp = document.querySelector('#marks').value="";
-
-        } else if (temp >= 70 && temp <=80) {
-            show.innerHTML = "Grade : A";
-            let temp = document.querySelector('#marks').value="";
-
-        } else if (temp >= 60 && temp <=70) {
-            show.innerHTML = "Grade : B";
-            let temp = document.querySelector('#marks').value="";
-
-        }else if (temp >= 50 && temp <=60) {
-            show.innerHTML = "Grade : C";
-            let temp = document.querySelector('#marks').value="";
-
-        } else {
-            show.innerHTML = "Grade : Fail";
-            let temp = document.querySelector('#marks').value="";
-
+            }
         }
-       }
+    //    function grade(){
+    //     let temp = document.querySelector('#marks').value;
+    //     let show = document.querySelector('#show');
+
+
+    //     if (temp >= 80 && temp <=100) {
+    //         show.innerHTML = "Grade : A-One";
+    //         let temp = document.querySelector('#marks').value="";
+
+    //     } else if (temp >= 70 && temp <=80) {
+    //         show.innerHTML = "Grade : A";
+    //         let temp = document.querySelector('#marks').value="";
+
+    //     } else if (temp >= 60 && temp <=70) {
+    //         show.innerHTML = "Grade : B";
+    //         let temp = document.querySelector('#marks').value="";
+
+    //     }else if (temp >= 50 && temp <=60) {
+    //         show.innerHTML = "Grade : C";
+    //         let temp = document.querySelector('#marks').value="";
+
+    //     } else {
+    //         show.innerHTML = "Grade : Fail";
+    //         let temp = document.querySelector('#marks').value="";
+
+    //     }
+    //    }
 
         // falsy values:
         // https://developer.mozilla.org/en-US/docs/Glossary/Falsy
