@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>Condition checking with if else</h1>
+    <form onsubmit="grade(); return false">
+        <input type="number" id="marks">
+        <button type="submit">check</button>
+        <h1 id="show"></h1>
+    </form>
+
+    <script>
+
+       function grade(){
+        let temp = document.querySelector('#marks').value;
+        let show = document.querySelector('#show');
+
+
+        if (temp >= 80 && temp <=100) {
+            show.innerHTML = "Grade : A-One";
+            let temp = document.querySelector('#marks').value="";
+
+        } else if (temp >= 70 && temp <=80) {
+            show.innerHTML = "Grade : A";
+            let temp = document.querySelector('#marks').value="";
+
+        } else if (temp >= 60 && temp <=70) {
+            show.innerHTML = "Grade : B";
+            let temp = document.querySelector('#marks').value="";
+
+        }else if (temp >= 50 && temp <=60) {
+            show.innerHTML = "Grade : C";
+            let temp = document.querySelector('#marks').value="";
+
+        } else {
+            show.innerHTML = "Grade : Fail";
+            let temp = document.querySelector('#marks').value="";
+
+        }
+       }
+
+        // falsy values:
+        // https://developer.mozilla.org/en-US/docs/Glossary/Falsy
+
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>
+</body>
+</html>
